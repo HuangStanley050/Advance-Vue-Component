@@ -11,11 +11,14 @@
         <p>
           {{ selectedComponent }}
         </p>
-        <component :is="selectedComponent"
-          ><p>
-            default content
-          </p>
-        </component>
+        <keep-alive>
+          <component :is="selectedComponent"
+            ><p>
+              default content
+            </p>
+          </component>
+        </keep-alive>
+
         <!-- <Quote>
           <h1 slot="title">{{ quoteTitle }}</h1>
           <p slot="content">
